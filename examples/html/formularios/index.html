@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+</head>
+<body>
+  <!-- Form  attributes -->
+  <form action="" method="get">
+    <div>
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" placeholder="Nombre">
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Pon tu email completo">
+    </div>
+
+    <div>
+      <label for="phone">Teléfono</label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="Teléfono"
+        pattern="[0-9]+"
+      >
+    </div>
+
+    <div>
+      <label for="age">Edad</label>
+      <input type="number" name="age" id="age">
+    </div>
+
+    <div>
+      <label for="pass">Passsword</label>
+      <input type="password" name="pass" id="pass">
+    </div>
+
+    <hr>
+    
+    <fieldset>
+      <legend>Fav programing lang</legend>
+      <label for="js">JavaScript</label>
+      <input type="radio" name="fav" id="js" value="js" checked>
+      <label for="python">Python </label>
+      <input type="radio" name="fav" id="python" value="python">
+      <label for="net">.NET</label>
+      <input type="radio" name="fav" id="net" value="net">
+    </fieldset>
+    <!--
+    <fieldset>
+      <legend>Skills</legend>
+      <label for="js">JavaScript</label>
+      <input type="radio" name="fav2" id="js" checked>
+      <label for="python">Python </label>
+      <input type="radio" name="fav2" id="python">
+      <label for="net">.NET</label>
+      <input type="radio" name="fav2" id="net">
+    </fieldset>
+    -->
+    <fieldset>
+      <legend>Skills</legend>
+      <label for="js">JavaScript</label>
+      <input type="checkbox" name="fav2" id="js" checked>
+      <label for="python">Python </label>
+      <input type="checkbox" name="fav2" id="python">
+      <label for="net">.NET</label>
+      <input type="checkbox" name="fav2" id="net">
+    </fieldset>
+
+    <hr>
+
+    <div>
+      <input type="submit" value="Enviar" id="submit">
+    </div>
+  </form>
+  <!-- input + label -->
+
+  <!--validaciones-->
+</body>
+</html>
