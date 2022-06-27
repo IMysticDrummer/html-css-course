@@ -1,0 +1,42 @@
+h3 {
+  color: green;
+}
+
+h2 {
+  color: purple;
+}
+
+#titulo-id {
+  color: black;
+}
+
+/*Comentarios*/
+
+.title-class {
+  color: rgb(107, 107, 4);
+}
+
+.content h4 {
+  font-style: normal;
+}
+
+section h4 {
+  font-style: italic;
+}
+
+/*Selectores*/
+/*Elementos justo herederos*/
+.list > li {
+  background-color: red;
+
+}
+
+/*Elemento justo heredero del anterior*/
+ul > li{
+  background-color: red;
+}
+
+/*Varios elementos*/
+.item, .button{
+  text-transform: uppercase;
+}
