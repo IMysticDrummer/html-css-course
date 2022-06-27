@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sem - form</title>
+</head>
+<body>
+  <!-- Semantic
+  <div class="contenido-principal">
+    <div class="contenido-seccion">
+      <div>
+        <div class="elemeto-lista">List item</div>
+        <div class="elemeto-lista">List item</div>
+        <div class="elemeto-lista">List item</div>
+        <div class="elemeto-lista">List item</div>
+      </div>
+    </div>
+    <div class="contenido-seccion">
+      <div class="form">
+        <label>description</label>
+        <input>
+        <span>Submit</span>
+      </div>
+    </div>
+    <div class="contenido-pie">
+      <div class="link" href="https://google.com">Google.com</div>
+    </div>
+  </div> -->
+
+  <!--Solución Semantic-->
+  <main class="contenido-principal">
+    <section class="contenido-seccion">
+      <ul>
+        <li class="elemeto-lista">List item</li>
+        <li class="elemeto-lista">List item</li>
+        <li class="elemeto-lista">List item</li>
+        <li class="elemeto-lista">List item</li>
+      </ul>
+    </section>
+    <section class="contenido-seccion">
+      <form class="form">
+        <label for="descripcion">description</label>
+        <input type="text" name="descripcion" id="descripcion" required>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+  <footer class="contenido-pie">
+    <a class="link" href="https://google.com" rel="noopener noreferrer">Google.com</a>
+  </footer>
+
+
+  <!--
+    Form action: "/register" method: "POST"
+
+    Todos los campos requeridos que se puedan mandar con el formulario
+    el twitter username tiene que tener este patrón -> ^@[^\s]+
+    Ej: @keepcoding_
+  -->
+  <form action="/register" method="post">
+    <div>
+      <label for="name">name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="surname">surname</label>
+      <input type="text" id="surname" name="surname" required>
+    </div>
+    <div>
+      <label for="phone">phone</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div>
+      <label for="email">email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="twitacc">Twitter account</label>
+      <input type="text" id="twitacc" name="twitacc" required pattern="^@[^\s]+">
+    </div>
+    <div>
+      <label for="password">password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <input type="submit" id="submit" value="register">
+  </form>
+</body>
+</html>
