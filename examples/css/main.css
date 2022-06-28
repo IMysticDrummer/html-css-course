@@ -31,7 +31,11 @@ section h4 {
 
 }
 
-/*Elemento justo heredero del anterior*/
+/*Elemento justo heredero del anterior
+OJO, en los li's si no hay background
+color en el padre, son transparentes y
+por tanto el color se traslada a otras
+listas que pueda haber por debajo*/
 ul > li{
   background-color: red;
 }
@@ -39,4 +43,9 @@ ul > li{
 /*Varios elementos*/
 .item, .button{
   text-transform: uppercase;
+}
+
+/*Hermano*/
+.label ~ input{
+  border: 2px solid red;
 }
