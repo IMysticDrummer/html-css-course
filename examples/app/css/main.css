@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #4c4ae6;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+
+  /*1. margin*/
+  /*margin: 20px 0 0 0;
+  margin: 20px;*/
+  /*2. border*/
+  /*border: 2px solid red;*/
+  /*border-radius: 15px;*/
+  /*3. padding*/
+  padding: 20px;
+  /*4. font-size*/
+  font-size: 16px;
+}
