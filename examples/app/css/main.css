@@ -2,20 +2,113 @@
   box-sizing: border-box;
 }
 
-.footer {
-  background-color: #4c4ae6;
-  color: #ffffff;
-  font-style: italic;
-  text-align: center;
-
-  /*1. margin*/
-  /*margin: 20px 0 0 0;
-  margin: 20px;*/
-  /*2. border*/
-  /*border: 2px solid red;*/
-  /*border-radius: 15px;*/
-  /*3. padding*/
-  padding: 20px;
-  /*4. font-size*/
+:root {
+  /* definición variable */
+  --main-primary-color: #4C4AE6;
+  --secondary-font-color: #fff;
   font-size: 16px;
+}
+body {
+  font-size: 16px;
+}
+.footer {
+  text-align: center;
+  font-style: italic;
+  /* 1. margin */
+  /* margin-top: 20px;
+  margin-left: 20px;20px;
+  margin-right: 
+  margin-bottom: 20px; */
+  /* T - R - B - L */
+  /* margin: 10px 30px 25px 60px; */
+  /* Y - X */
+  /* margin: 10px 30px; */
+  /* Todos */
+  /* margin: 10px; */
+  /* margin: 10px 30px 25px; */
+  /* 2. border */
+  /* border: 2px solid red; */
+  /* border-radius: 50%; */
+  /* 3. padding */
+  padding: 1rem;
+  font-size: 1rem;
+  /* 1em -> 16px */
+  /* 1rem -> 16px */
+}
+
+.absolute-font {
+  padding: 16px;
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.main-bg {
+  background-color: var(--main-primary-color);
+  color: var(--secondary-font-color);
+}
+
+/* --- navbar --- */
+.navbar {
+  padding: 10px 20px;
+  /* position: fixed; */
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 75px;
+}
+
+.navbar .image-container {
+  width: 50px;
+}
+
+.navbar .image-container img {
+  width: 100%;
+}
+
+.navbar .app-title {
+  color: var(--secondary-font-color);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.main-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.search-form h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.search-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-form .form-group .search-label {
+  margin-bottom: 10px;
+}
+
+.search-form input {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.search-form input[type="submit"] {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+  margin: 10px 0;
 }
