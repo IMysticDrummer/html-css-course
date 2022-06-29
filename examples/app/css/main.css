@@ -78,11 +78,6 @@ body {
   font-size: 2rem;
 }
 
-.main-content {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .search-form h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -112,3 +107,109 @@ body {
   transition: background-color 0.3s linear;
   margin: 10px 0;
 }
+
+@media print {
+  body {
+    color: red !important;
+  }
+}
+
+/*
+@media screen and (max-width:400px) {
+  .navbar .image-container {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: flex-end;
+  }
+}
+*/
+
+/*Hacemos siempre mobile first*/
+.navbar .image-container {
+  display: none;
+}
+
+.navbar {
+  justify-content: flex-end;
+}
+
+.search-form {
+  max-width: 600px;
+}
+
+.main-content {
+  width: 90%; /*width relativo */
+  margin: 0 auto; /*Permite centrar el main en mobile y con responsive*/
+  max-width: 1220px; /*Limita el máximo para quedar más elegante*/
+}
+
+.carousel-slides {
+  width: 100%;
+  height: 30vh; /*Da el alto del contenedor*/
+  display: flex;
+  /*A generar un flex, va a poner los elementos
+  uno al lado del otro.
+  Ahora ponemos la dirección column, para que los
+  apile, en vez de estar en horizontal.
+  Después le decimo que queremos que haga 
+  wrap, para que ocupen el espacio indicado
+  (100% en el hijo de anchura) y que el resto
+  sobresalga.
+  Depués le decimos que, lo que sobresalga lo
+  oculte, para que no tengamos scroll.
+  Por último ponemos un comportamiento del
+  scroll como suave, para que la transición
+  cuando pulsemos los botones, sea suave.*/
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel-slides > div {
+  width: 100%;
+  background-color: rgb(59, 59, 59);
+  color: var(--secondary-font-color);
+  height: 100%;
+}
+
+.carousel-links {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-dot {
+  background-color: black;
+  width: 16px;
+  height: 16px;
+  display: block; /*para que salgan, sino serán inline y no saldrán*/
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.content {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px){
+  .navbar .image-container {
+    display: block;
+  }
+  
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sidebar{
+    width: 25%;
+  }
+  .anime-content {
+    width: 70%;
+  }
+}
+
